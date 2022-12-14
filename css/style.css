@@ -71,3 +71,22 @@ body{
 .active{
     display: block;
 }
+
+.btn-position{
+    display: flex;
+    justify-content: center;
+}
+
+#play, #stop{
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+
+} 
+
+.circle{
+    background-color: grey;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}

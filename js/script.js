@@ -54,6 +54,7 @@ item[itemActive].classList.add('active')
 const next = document.getElementById('next')
 const prev = document.getElementById('prev')
 
+
 next.addEventListener('click',function(){
 
 
@@ -100,5 +101,46 @@ prev.addEventListener('click',function(){
 
     }
 
+})
+
+function autoPlay (){
+
+    if(itemActive < imageArrayObject.length -1)
+    {
+
+        item[itemActive].classList.remove('active')
+
+        itemActive++
+    
+        item[itemActive].classList.add('active')
+
+    }else{
+
+        item[itemActive].classList.remove('active')
+
+        itemActive=0
+    
+        item[itemActive].classList.add('active')
+
+
+    }
+
+
+}
+
+
+
+let play= document.getElementById('play')
+let stop = document.getElementById('stop')
+
+let myplay = setInterval(autoPlay,3000)
+
+play.addEventListener('click',function(){
+    clearInterval(myplay)
+    myplay = setInterval(autoPlay,3000)
+})
+
+stop.addEventListener('click',function(){
+    clearInterval(myplay)
 })
 
