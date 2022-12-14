@@ -6,22 +6,22 @@ const imageArrayObject = [
     },
     {
         url : '02.webp',
-        title : 'ciao',
+        title : 'Rachet And Clank',
         description: 'experience the riles of Miles Morales as the new hero masters incredible, explosive new powers to become his own spiderman'
     },
     {
         url : '03.webp',
-        title : 'ciao 2',
+        title : 'Fortnite',
         description: 'experience the riles of Miles Morales as the new hero masters incredible, explosive new powers to become his own spiderman'
     },
     {
         url : '04.webp',
-        title : 'Marvel spiderman Miles Morales',
+        title : 'Il gatto con gli stivali',
         description: 'experience the riles of Miles Morales as the new hero masters incredible, explosive new powers to become his own spiderman'
     },
     {
         url : '05.webp',
-        title : 'Marvel spiderman Miles Morales',
+        title : 'Avengers',
         description: 'experience the riles of Miles Morales as the new hero masters incredible, explosive new powers to become his own spiderman'
     }
 
@@ -35,8 +35,8 @@ for(let i= 0; i< imageArrayObject.length; i++){
 
     divItem +=  `<div class="item">
     <img src="./img/${image.url}">
-    <p class="p1">${image.title}</p>
-    <p class="p2">${image.description}</p> 
+    <h1 class="title">${image.title}</h1>
+    <p class="subtitle">${image.description}</p> 
     </div>`
 
 }
@@ -55,6 +55,7 @@ const next = document.getElementById('next')
 const prev = document.getElementById('prev')
 
 next.addEventListener('click',function(){
+
 
     if(itemActive < imageArrayObject.length -1)
     {
@@ -76,7 +77,6 @@ next.addEventListener('click',function(){
 
     }
 
-
 })
 
 prev.addEventListener('click',function(){
@@ -91,14 +91,14 @@ prev.addEventListener('click',function(){
 
 
     }else{
+        
         item[itemActive].classList.remove('active')
 
-        itemActive=4
+        itemActive = 4
     
         item[itemActive].classList.add('active')
 
     }
-e
 
 })
 
